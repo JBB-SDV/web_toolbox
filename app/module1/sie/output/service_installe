@@ -1,0 +1,60 @@
+  UNIT                                                                                      LOAD   ACTIVE SUB     DESCRIPTION
+  accounts-daemon.service                                                                   loaded active running Accounts Service
+  alsa-restore.service                                                                      loaded active exited  Save/Restore Sound Card State
+  apache2.service                                                                           loaded active running The Apache HTTP Server
+  apparmor.service                                                                          loaded active exited  Load AppArmor profiles
+  avahi-daemon.service                                                                      loaded active running Avahi mDNS/DNS-SD Stack
+  console-setup.service                                                                     loaded active exited  Set console font and keymap
+  containerd.service                                                                        loaded active running containerd container runtime
+  cron.service                                                                              loaded active running Regular background program processing daemon
+  cups-browsed.service                                                                      loaded active running Make remote CUPS printers available locally
+  cups.service                                                                              loaded active running CUPS Scheduler
+  dbus.service                                                                              loaded active running D-Bus System Message Bus
+  docker.service                                                                            loaded active running Docker Application Container Engine
+● fwupd-refresh.service                                                                     loaded failed failed  Refresh fwupd metadata and update motd
+  ifupdown-pre.service                                                                      loaded active exited  Helper to synchronize boot up for ifupdown
+  keyboard-setup.service                                                                    loaded active exited  Set the console keyboard layout
+  kmod-static-nodes.service                                                                 loaded active exited  Create List of Static Device Nodes
+  ModemManager.service                                                                      loaded active running Modem Manager
+  networking.service                                                                        loaded active exited  Raise network interfaces
+  NetworkManager-wait-online.service                                                        loaded active exited  Network Manager Wait Online
+  NetworkManager.service                                                                    loaded active running Network Manager
+  openvpn.service                                                                           loaded active exited  OpenVPN service
+  packagekit.service                                                                        loaded active running PackageKit Daemon
+  plymouth-quit-wait.service                                                                loaded active exited  Hold until boot process finishes up
+  plymouth-quit.service                                                                     loaded active exited  Terminate Plymouth Boot Screen
+  plymouth-read-write.service                                                               loaded active exited  Tell Plymouth To Write Out Runtime Data
+  plymouth-start.service                                                                    loaded active exited  Show Plymouth Boot Screen
+  polkit.service                                                                            loaded active running Authorization Manager
+  rtkit-daemon.service                                                                      loaded active running RealtimeKit Scheduling Policy Service
+  sddm.service                                                                              loaded active running Simple Desktop Display Manager
+  smartmontools.service                                                                     loaded active running Self Monitoring and Reporting Technology (SMART) Daemon
+  ssh.service                                                                               loaded active running OpenBSD Secure Shell server
+  systemd-binfmt.service                                                                    loaded active exited  Set Up Additional Binary Formats
+  systemd-fsck@dev-disk-by\x2duuid-f45ea736\x2d67f3\x2d46e2\x2dafbc\x2dfc602a129217.service loaded active exited  File System Check on /dev/disk/by-uuid/f45ea736-67f3-46e2-afbc-fc602a129217
+  systemd-journal-flush.service                                                             loaded active exited  Flush Journal to Persistent Storage
+  systemd-journald.service                                                                  loaded active running Journal Service
+  systemd-logind.service                                                                    loaded active running User Login Management
+  systemd-modules-load.service                                                              loaded active exited  Load Kernel Modules
+  systemd-random-seed.service                                                               loaded active exited  Load/Save Random Seed
+  systemd-remount-fs.service                                                                loaded active exited  Remount Root and Kernel File Systems
+  systemd-sysctl.service                                                                    loaded active exited  Apply Kernel Variables
+  systemd-sysusers.service                                                                  loaded active exited  Create System Users
+  systemd-timesyncd.service                                                                 loaded active running Network Time Synchronization
+  systemd-tmpfiles-setup-dev.service                                                        loaded active exited  Create Static Device Nodes in /dev
+  systemd-tmpfiles-setup.service                                                            loaded active exited  Create System Files and Directories
+  systemd-udev-trigger.service                                                              loaded active exited  Coldplug All udev Devices
+  systemd-udevd.service                                                                     loaded active running Rule-based Manager for Device Events and Files
+  systemd-update-utmp.service                                                               loaded active exited  Record System Boot/Shutdown in UTMP
+  systemd-user-sessions.service                                                             loaded active exited  Permit User Sessions
+  udisks2.service                                                                           loaded active running Disk Manager
+  upower.service                                                                            loaded active running Daemon for power management
+  user-runtime-dir@1000.service                                                             loaded active exited  User Runtime Directory /run/user/1000
+  user@1000.service                                                                         loaded active running User Manager for UID 1000
+  wpa_supplicant.service                                                                    loaded active running WPA supplicant
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+53 loaded units listed. Pass --all to see loaded but inactive units, too.
+To show all installed unit files use 'systemctl list-unit-files'.

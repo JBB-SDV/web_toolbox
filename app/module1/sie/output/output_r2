@@ -1,0 +1,6 @@
+Cette ligne doit être rajouté ou modifé dans votre config openSSH conformément au socle de durcisment
+Ciphers aes256-ctr,aes192-ctr,aes128-ctr
+
+Cette ligne doit être rajouté ou modifé dans votre config openSSH conformément au socle de durcisment
+MACs hmac-sha2-512,hmac-sha2-256
+

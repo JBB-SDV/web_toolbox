@@ -1,0 +1,20 @@
+Utilisateur: root → Algorithme non sécurisé ou inconnu
+Utilisateur: adminb → Algorithme non sécurisé ou inconnu
+Utilisateur: jb → Algorithme non sécurisé ou inconnu
+Utilisateur: SSI → Algorithme non sécurisé ou inconnu
+Utilisateur: projecteur → Algorithme non sécurisé ou inconnu
+
+
+Remédiation ! 
+
+
+ Certains utilisateurs ont des problèmes de sécurité.
+➡️  Pour corriger :
+   - Utilisez SHA-512 avec un sel : passwd -e <utilisateur>
+   - Vérifiez que les rounds dans /etc/login.defs et PAM (/etc/pam.d/common-password)
+       Pour /common-password
+          password required pam_unix.so sha512 rounds=65536
+       Pour /common-password
+       ENCRYPT_METHOD SHA512 
+       SHA_CRYPT_MIN_ROUNDS 65536 
+       SHA_CRYPT_MAX_ROUNDS 90000

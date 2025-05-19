@@ -1,0 +1,15 @@
+
+<div class="container mt-5">
+    <h2>Connexion SSH</h2>
+    <form method="post" action="{{ url_for('SSHView.connect_ssh') }}">
+        <div class="mb-3">
+            <label for="ssh_key" class="form-label">Clé SSH Privée :</label>
+            <textarea class="form-control" id="ssh_key" name="ssh_key" rows="5" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="target" class="form-label">Adresse IP / Host :</label>
+            <input type="text" class="form-control" id="target" name="target" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Se connecter</button>
+    </form>
+</div>

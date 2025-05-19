@@ -1,0 +1,172 @@
+{% extends "appbuilder/base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Adresse IP</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #eef2f7;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Titre principal */
+        h1 {
+            text-align: center;
+            color: #2C3E50;
+            margin-top: 20px;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        /* Sous-titre */
+        h2 {
+            color: #3498DB;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Conteneur pour aligner les deux formulaires sur la même ligne */
+        .form-container-wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin-top: 20px;
+            gap: 30px; /* Espace entre les deux formulaires */
+            margin-left: 120px;
+        }
+
+        /* Formulaire - Aligné au centre */
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .form-container div {
+            margin-bottom: 15px;
+        }
+
+        .form-container label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3498DB;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #2980B9;
+        }
+
+        /* Bouton Retour à l'accueil */
+        .btn-home {
+            display: block;
+            width: fit-content;
+            padding: 10px 15px;
+            background-color: #3498DB;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-home:hover {
+            background-color: #2980B9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Entrez une adresse IP</h1>
+    <p>Cette adresse IP sera désignée comme la target à scanner.</p>
+
+    <!-- Conteneur principal avec les deux formulaires sur la même ligne -->
+    <div class="form-container-wrapper">
+        <!-- Premier formulaire -->
+        <div class="form-container">
+            <form method="POST">
+                <p>Systemes <u><b>non SIE</u></b></p>
+
+                {{ form.hidden_tag() }}
+                <div>
+                    {{ form.ip_address.label }}<br>
+                    {{ form.ip_address(size=20) }}<br>
+                </div>            
+                <div>
+                    {{ form.username.label }}<br>
+                    {{ form.username(size=20) }}<br>
+                </div>
+                <div>
+                    {{ form.password.label }}<br>
+                    {{ form.password(size=20) }}<br>
+                </div>
+                <input type="hidden" name="script_type" value="nosie">
+                <button type="submit">Soumettre</button>
+                </form>
+        </div>
+
+        <!-- Deuxième formulaire -->
+        <div class="form-container">
+            <form method="POST">
+                <p>Systemes <u><b>SIE</u></b></p>
+                {{ form.hidden_tag() }}
+                <div>
+                    {{ form.ip_address.label }}<br>
+                    {{ form.ip_address(size=20) }}<br>
+                </div>            
+                <div>
+                    {{ form.username.label }}<br>
+                    {{ form.username(size=20) }}<br>
+                </div>
+                <div>
+                    {{ form.password.label }}<br>
+                    {{ form.password(size=20) }}<br>
+                </div>
+                <input type="hidden" name="script_type" value="sie">
+                <button type="submit">Soumettre2</button>
+            </form>
+        </div>
+    </div>
+
+    <!--<a href="/report/module1/" class="btn-home">Accès au résultat</a>-->
+</body>
+</html>
+{% endblock %}

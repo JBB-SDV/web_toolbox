@@ -1,0 +1,5 @@
+Attention la politque de mot de passe n'est pas appliqué !!
+ La politque de mot de passe doit comporter 14 caracèteres et 4 caracèteres différent
+ Voici une regle PAM avec les parametres requis 
+
+password    requisite            pam_pwquality.so retry=3 minlen=14 difok=4

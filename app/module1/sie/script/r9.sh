@@ -1,0 +1,1 @@
+systemctl list-units --type=service | grep -i 'clamav\|avast\|sophos\|bitdefender\|eset\|trellix\|mcafee' || echo "Aucun antivirus n'est installé !"
